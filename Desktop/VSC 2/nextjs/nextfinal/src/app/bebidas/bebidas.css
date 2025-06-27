@@ -1,0 +1,60 @@
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+.imagenbebida {
+  height: 10rem;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+
+.platoBebidas .imagen:hover {
+  border-radius: 12px;
+}
+
+
+.platoBebidas {
+  border-style: solid;
+  border-color: rgb(0, 255, 98);
+  border-width: 0.5px;
+  background-color: rgba(0, 161, 100, 0.644);
+  max-width: 350px; 
+}
+
+@media (max-width: 768px) {
+  .mx-10,
+  .md\:mx-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  video,
+  img {
+    height: 50vh;
+  }
+
+  .platoCorea {
+    max-width: 100%;
+  }
+}
+
+.precio{
+
+  text-shadow: -2px 3px 2px rgb(0, 0, 0);
+  color: rgb(0, 255, 42);
+}

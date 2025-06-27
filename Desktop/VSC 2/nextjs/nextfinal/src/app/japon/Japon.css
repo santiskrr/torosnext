@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imagen {
+  height: 10rem;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.plato .imagen:hover {
+  transform: scale(1.05);
+  border-radius: 12px;
+}
+
+.plato {
+  background-color: rgba(0, 0, 0, 0.308);
+  border-style: solid;
+  border-color: rgba(0, 255, 213, 0.788);
+  border-width: 2px;
+  max-width: 350px;
+}
+
+@media (max-width: 768px) {
+  .ml-40,
+  .mr-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  video,
+  img {
+    height: 50vh;
+  }
+
+  .plato {
+    max-width: 100%;
+  }
+}
