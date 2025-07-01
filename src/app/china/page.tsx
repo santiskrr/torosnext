@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import ArregloChina from "@/datos/ArregloChina";
 import ArregloPostres from "@/datos/postresChina.jsx";
 import ArregloCombo from "@/datos/ArregloCombo.jsx";
-import fondoChina from "@/assets/FondoChina2.jpg";
 import chineseBanner from "@/assets/chinese.jpg";
 import videoPromocional from "@/assets/Video.mp4.gif";
 import chefImage from "@/assets/3975.png";
@@ -15,8 +14,8 @@ export default function China() {
   return (
     <>
       <div
-        className="p-8 space-y-16 bg-black bg-cover bg-center"
-        style={{ backgroundImage: `url(${fondoChina})` }}
+        className="p-8 space-y-16 bg-black bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${'https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//bgchina.jpg'})` }}
       >
         {/* Título principal con fondo oscuro */}
         <div className="text-center mb-12 text-white p-10">
@@ -41,9 +40,9 @@ export default function China() {
           </motion.div>
         </div>
 
-        <div className="p-8 max-w-screen">
+        <div className="max-w-screen">
           <motion.h2
-            className="text-2xl font-bold text-yellow-300 text-center bg-red-800 p-3 rounded-md shadow-md"
+            className="text-2xl font-bold text-yellow-300 text-center bg-red-600 p-3 rounded-md shadow-md"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -58,7 +57,7 @@ export default function China() {
 
         <div className="max-w-screen">
           <motion.h2
-            className="text-2xl font-bold text-yellow-300 text-center bg-red-800 p-3 rounded-md shadow-md"
+            className="text-2xl font-bold text-yellow-300 text-center bg-red-600 p-3 rounded-md shadow-md"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -71,20 +70,19 @@ export default function China() {
           <ArregloPostres />
         </div>
 
-        <div className="p-2 max-w-screen">
+        <div className="max-w-screen">
           <ArregloCombo />
         </div>
 
-        {/* 🎥 Video promocional */}
-        <div className="mt-12">
-          <video
-            src={videoPromocional}
-            autoPlay
-            muted
-            loop
-            className="w-full h-64 object-cover rounded-xl shadow-lg"
-          />
-        </div>
+        {/* 🎥 Video promocional (GIF animado) */}
+<div className="mt-12">
+  <Image
+    src={videoPromocional}
+    alt="GIF promocional"
+    className="imagen rounded-xl w-full h-60 object-cover mb-3"
+  />
+</div>
+
 
         <motion.div
           className="mt-16 flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-black via-red-600 to-black p-6 rounded-xl shadow-[0_4px_12px_#6E1B14] scale-100"

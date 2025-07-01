@@ -1,57 +1,62 @@
-import React from "react";
-import { postresChina } from "./postresChina.js";
-import Button from '@/componentes/Botonpedido.jsx';
+import React, { useState, useEffect } from "react";
+import { postresChina } from "@/datos/postresChina.js";
+import Button from "@/componentes/Botonpedido.jsx";
 
 const ArregloPostres = () => {
+  const [imagenAmpliada, setImagenAmpliada] = useState(null);
+  const [esEscritorio, setEsEscritorio] = useState(true);
 
-    return (
-       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10">
-    {postresChina.map((postre, index) => (
-        <div key={index} className="bg-black/80 rounded-xl p-4 shadow-md hover:scale-105 hover:shadow-red-500 transition-transform text-center min-h-[340px] flex flex-col justify-between overflow-hidden">
-            <div 
-                className="relative overflow-hidden rounded-md group w-full h-56 cursor-grab"
-                onMouseDown={(e) => {
-                    const img = e.currentTarget.querySelector("img");
-                    img.style.transform = "scale(2)";
-                    img.style.cursor = "grabbing";
-                    img.style.position = "absolute";
-                    img.style.left = "0";
-                    img.style.top = "0";
-                    
-                    e.currentTarget.onmousemove = (event) => {
-                        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-                        const x = event.clientX - left - (width / 2);
-                        const y = event.clientY - top - (height / 2);
-                        img.style.transform = `scale(2) translate(${x}px, ${y}px)`;
-                    };
-                }}
-                onMouseUp={(e) => {
-                    const img = e.currentTarget.querySelector("img");
-                    img.style.transform = "scale(1)";
-                    img.style.cursor = "grab";
-                    img.style.position = "relative";
-                    e.currentTarget.onmousemove = null;
-                }}
-            >
-                <img 
-                    src={postre.imagen} 
-                    alt={postre.comida} 
-                    className="w-full h-full object-cover rounded-md mb-3 transition-transform duration-300 ease-out"
-                    draggable="false"
-                />
-            </div>
-            <h3 className="text-xl font-semibold text-red-400">{postre.comida}</h3>
+  useEffect(() => {
+    const actualizar = () => setEsEscritorio(window.innerWidth >= 768);
+    actualizar();
+    window.addEventListener("resize", actualizar);
+    return () => window.removeEventListener("resize", actualizar);
+  }, []);
+
+  return (
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10">
+        {postresChina.map((postre, index) => (
+          <div
+            key={index}
+            className="bg-black/80 rounded-xl p-4 shadow-md hover:scale-105 hover:shadow-red-600 transition-transform text-center min-h-[340px] flex flex-col justify-between overflow-hidden"
+          >
+            <img
+              className="imagen rounded-xl w-full h-full object-cover mb-3 cursor-pointer"
+              src={postre.imagen}
+              alt={postre.comida}
+              onClick={() => esEscritorio && setImagenAmpliada(postre.imagen)}
+            />
+
+            <h3 className="text-xl font-semibold text-red-600">{postre.comida}</h3>
             <p className="text-sm text-white mt-1">{postre.descripcion}</p>
             <p className="mt-2 text-yellow-300 font-bold">{postre.precio}</p>
-            <div className='m-5'>
-                <Button  comida ={postre}/>
-                </div>
+            <div className="m-5">
+              <Button comida={postre} />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {imagenAmpliada && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+          <div className="relative">
+            <img
+              src={imagenAmpliada}
+              alt="Vista ampliada"
+              className="max-w-[90vw] max-h-[90vh] rounded-lg"
+            />
+            <button
+              onClick={() => setImagenAmpliada(null)}
+              className="absolute top-2 right-2 text-white text-3xl font-bold"
+            >
+              ×
+            </button>
+          </div>
         </div>
-    ))}
-</div>
-
-
-    );
+      )}
+    </>
+  );
 };
 
 export default ArregloPostres;

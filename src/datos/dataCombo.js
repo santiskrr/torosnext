@@ -1,5 +1,5 @@
-import dumplingGif from "../assets/dumplin.gif";
-import arrozGif from "../assets/Arroz.gif";
+import dumplingGif from "@/assets/dumplin.gif";
+import arrozGif from "@/assets/Arroz.gif";
 
 export const combos = [
   {
