@@ -24,14 +24,18 @@ const Inicio = () => {
               Bienvenidos a
             </h1>
 
-            <motion.img
-              src={"https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//logotipotorored.png"}
-              alt="Toro's Wok"
-              className="h-20 sm:h-24 md:h-28 w-auto object-contain"
-              initial={{ scale: 3, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-            />
+            <motion.div
+  initial={{ scale: 3, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 1.5, ease: "easeOut" }}
+>
+  <Image
+    src="https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes/logotipotorored.png"
+    alt="Toro's Wok"
+
+    className="h-20 sm:h-24 md:h-28 w-auto object-contain"
+  />
+</motion.div>
 
             <p className="text-base sm:text-lg md:text-xl text-white bg-black/60 px-6 py-2 rounded-lg shadow-md tracking-wide">
               Explora los sabores intensos y exóticos de Asia
