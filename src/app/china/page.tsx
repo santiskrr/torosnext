@@ -26,7 +26,7 @@ export default function China() {
           >
             <div
               className="relative mx-10 md:mx-30 h-40 rounded-2xl bg-cover bg-center overflow-hidden bg-black/50"
-              style={{ backgroundImage: `url(${chineseBanner})` }}
+              style={{ backgroundImage: `url(${'https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//chinese.jpg'})` }}
             >
               <div className="absolute inset-0 flex flex-col justify-center items-center">
                 <h2 className="text-4xl font-bold text-red-600 Do Hyeon">
