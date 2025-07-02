@@ -1,4 +1,4 @@
-import ofertaGif from "../assets/bg.gif";
+import ofertaGif from "@/assets/bg.gif";
 
 export const comboInicio = [
     {
