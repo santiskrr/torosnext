@@ -1,6 +1,6 @@
  "use client"
 import { motion } from 'framer-motion';
-import ListBebidas from "@/datos/arregloBebidas.tsx";
+import ListBebidas from "@/datos/arregloBebidas";
 import './bebidas.css'
 
 

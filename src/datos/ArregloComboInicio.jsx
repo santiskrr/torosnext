@@ -21,7 +21,7 @@ const ArregloComboInicio = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${combo.imagen})` }}></div>
+                        <div className="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${"https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//bg.gif"})` }}></div>
                         <div className="relative z-10">
                             <h3 className="text-2xl font-bold text-[#FFD700]">{combo.titulo}</h3>
                             <p className="mt-2 text-[#F2D8A7]">{combo.descripcion}</p>
