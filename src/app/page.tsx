@@ -1,15 +1,41 @@
 'use client'
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import ArregloHome from "@/datos/ArregloHome.jsx";
 import ArregloComboInicio from "@/datos/ArregloComboInicio.jsx";
 import ArregloPlatoEstrella from "@/datos/ArregloPlatoEstrella.jsx";
-import logotipoToro from "@/assets/logotipotorored.png";
+import { createClient } from '@/utils/supabase/client'
 
-import Image from "next/image";
 
-const Inicio = () => {
+interface plato{
+  id:number, plato:string, precio:number, descripcion:string, imagen:string, categoria:string}
+
+
+
+export default function Inicio() {
+  const [platos, setPlatos]=useState<plato[]>([])
+ 
+  
+ useEffect(() => {
+    getPlato();
+  }, []);
+  async function getPlato() {
+   const supabase = createClient()
+    const { data } = await supabase.from("comidas").select().eq('categoria', 'China');
+    setPlatos(data);
+  }
+
+
   return (
+    <>
+
+    
+    <ul>
+      {platos?.map((plato) => (
+        <li>{plato.plato}{plato.precio}{plato.categoria}</li>
+      ))}
+    </ul>
+
     <div
       className="bg-black bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${'https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//fondo.jpg'})` }}
@@ -67,7 +93,7 @@ const Inicio = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };
 
-export default Inicio;

@@ -1,0 +1,26 @@
+/* [project]/src/componentes/ShinyText.css [app-client] (css) */
+.shiny-text {
+  color: #fdf7f77c;
+  background: linear-gradient(120deg, #fff0 40%, #fff 50%, #fff0 60%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 4s linear infinite shine;
+  display: inline-block;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+
+
+/*# sourceMappingURL=src_componentes_ShinyText_df0c0f5b.css.map*/

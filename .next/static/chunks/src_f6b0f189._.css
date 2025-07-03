@@ -1,0 +1,79 @@
+@import "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap";
+/* [project]/src/app/japon/Japon.css [app-client] (css) */
+.orbitron {
+  font-optical-sizing: auto;
+  font-family: Orbitron, sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imagen {
+  width: 100%;
+  height: 10rem;
+  transition: transform .3s ease-in-out;
+}
+
+.plato .imagen:hover {
+  border-radius: 12px;
+  transform: scale(1.05);
+}
+
+.plato {
+  background-color: #0000004f;
+  border: 2px solid #00ffd5c9;
+  max-width: 350px;
+}
+
+@media (width <= 768px) {
+  .ml-40, .mr-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+
+  video, img {
+    height: 50vh;
+  }
+
+  .plato {
+    max-width: 100%;
+  }
+}
+
+
+/* [project]/src/componentes/ShinyText.css [app-client] (css) */
+.shiny-text {
+  color: #fdf7f77c;
+  background: linear-gradient(120deg, #fff0 40%, #fff 50%, #fff0 60%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 4s linear infinite shine;
+  display: inline-block;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+
+
+/*# sourceMappingURL=src_f6b0f189._.css.map*/

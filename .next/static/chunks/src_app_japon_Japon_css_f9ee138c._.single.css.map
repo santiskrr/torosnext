@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/japon/Japon.css"],"sourcesContent":["\r\n@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');\r\n\r\n\r\n.orbitron {\r\n  font-family: \"Orbitron\", sans-serif;\r\n  font-optical-sizing: auto;\r\n}\r\n\r\nbody {\r\n  background-size: cover;\r\n  background-repeat: no-repeat;\r\n}\r\n\r\n.imagen {\r\n  height: 10rem;\r\n  width: 100%;\r\n  transition: transform 0.3s ease-in-out;\r\n}\r\n\r\n.plato .imagen:hover {\r\n  transform: scale(1.05);\r\n  border-radius: 12px;\r\n}\r\n\r\n.plato {\r\n  background-color: rgba(0, 0, 0, 0.308);\r\n  border-style: solid;\r\n  border-color: rgba(0, 255, 213, 0.788);\r\n  border-width: 2px;\r\n  max-width: 350px;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .ml-40,\r\n  .mr-40 {\r\n    margin-left: 1rem;\r\n    margin-right: 1rem;\r\n  }\r\n\r\n  h2 {\r\n    font-size: 2rem;\r\n  }\r\n\r\n  p {\r\n    font-size: 0.9rem;\r\n  }\r\n\r\n  video,\r\n  img {\r\n    height: 50vh;\r\n  }\r\n\r\n  .plato {\r\n    max-width: 100%;\r\n  }\r\n}"],"names":[],"mappings":"AAIA;;;;;AAKA;;;;;AAKA;;;;;;AAMA;;;;;AAKA;;;;;;AAQA;EACE;;;;;EAMA;;;;EAIA;;;;EAIA;;;;EAKA"}}]
+}

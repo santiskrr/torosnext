@@ -1,0 +1,66 @@
+/* [project]/src/componentes/GradientText.css [app-client] (css) */
+.animated-gradient-text {
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  border-radius: 1.25rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  margin: 0 auto;
+  font-weight: 500;
+  transition: box-shadow .5s ease-out;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-overlay {
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+  background-size: 300% 100%;
+  animation: linear infinite gradient;
+  position: absolute;
+  inset: 0;
+}
+
+.gradient-overlay:before {
+  content: "";
+  border-radius: inherit;
+  z-index: -1;
+  background-color: #060010;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+.text-content {
+  z-index: 2;
+  color: #0000;
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: linear infinite gradient;
+  display: inline-block;
+  position: relative;
+}
+
+/*# sourceMappingURL=src_componentes_GradientText_css_f9ee138c._.single.css.map*/

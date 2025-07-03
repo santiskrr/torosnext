@@ -1,7 +1,5 @@
 import { platos } from './data.js';
 import Button from '../componentes/Botonpedido.jsx';
-import React from 'react';
-import Card from '../componentes/Card.jsx';
 
 
 export default function List() {
