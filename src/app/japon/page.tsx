@@ -1,7 +1,7 @@
  "use client"
 import './Japon.css';
 import { motion } from 'framer-motion';
-import List from "@/datos/arreglo.jsx";
+import List from "@/datos/arreglo.tsx";
 
 function Japon() {
   return (<>

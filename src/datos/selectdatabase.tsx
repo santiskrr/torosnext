@@ -1,26 +1,25 @@
-'use client'
-import React, { useState,useEffect } from "react";
-import { createClient } from '@/utils/supabase/client'
+import { createClient } from '@/utils/supabase/client';
 
+interface Plato {
+  id: number;
+  plato: string;
+  precio: number;
+  descripcion: string;
+  imagen: string;
+  categoria: string;
+}
 
-interface plato{
-  id:number, plato:string, precio:number, descripcion:string, imagen:string, categoria:string}
+export async function getPlatos(): Promise<Plato[]> {
+  const supabase = createClient();
+  const { data, error } = await supabase
+    .from('comidas')
+    .select()
+    .eq('categoria', 'China');
 
-export default function database(){
-    const [platos, setPlatos]=useState<plato[]>([])
+  if (error) {
+    console.error('Error fetching platos:', error);
+    return [];
+  }
 
-    useEffect(() => {
-        getPlato();
-      }, []);
-      async function getPlato() {
-       const supabase = createClient()
-        const { data } = await supabase.from("comidas").select().eq('categoria', 'China');
-        setPlatos(data);
-  
-    }
-return(
-      
-      platos
-)}
-
-
+  return data || [];
+}

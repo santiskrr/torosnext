@@ -1,8 +1,26 @@
-import { platos } from './data.js';
+import React, { useState, useEffect } from 'react';
+import { getPlatos } from '@/datos/selectdatabase.tsx';
 import Button from '../componentes/Botonpedido.jsx';
 
+interface Plato {
+  id: number;
+  plato: string;
+  precio: number;
+  descripcion: string;
+  imagen: string;
+  categoria: string;
+}
 
 export default function List() {
+  const [platos, setPlatos] = useState<Plato[]>([]);
+
+  useEffect(() => {
+    async function fetchPlatos() {
+      const data = await getPlatos();
+      setPlatos(data);
+    }
+    fetchPlatos();
+  }, []);
 
   return (
     <article>
@@ -13,14 +31,14 @@ export default function List() {
               <img
                 className="imagen rounded-xl w-full h-40 object-cover mb-3"
                 src={plato.imagen}
-                alt={plato.comida}
+                alt={plato.plato}
               />
-              <h3 className="text-xl font-semibold text-white orbitron">{plato.comida}</h3>
+              <h3 className="text-xl font-semibold text-white orbitron">{plato.plato}</h3>
               <p className="text-sm text-zinc-300 mt-1 orbitron line-clamp-3">{plato.descripcion}</p>
               <p className="mt-2 text-green-500 orbitron">{plato.precio}</p>
-                <div className='m-5'>
-                <Button  comida ={plato}/>
-                </div>
+              <div className="m-5">
+                <Button comida={plato} />
+              </div>
             </div>
           </div>
         ))}
