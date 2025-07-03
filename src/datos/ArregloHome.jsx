@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { nuevosPlatos } from "@/datos/dataHome.js";
-import Button from "@/componentes/Botonpedido.jsx";
+import Button from "@/componentes/Botonpedido.tsx";
 
 const container = {
   hidden: {},

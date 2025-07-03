@@ -24,7 +24,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// database.tsx
 __turbopack_context__.s({
     "getPlatos": (()=>getPlatos)
 });
@@ -32,12 +31,20 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$
 ;
 async function getPlatos() {
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$client$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createClient"])();
-    const { data, error } = await supabase.from('comidas').select().eq('categoria', 'China');
+    const { data, error } = await supabase.from('comidas').select('id, plato, precio, descripcion, imagen, categoria').eq('categoria', 'China');
     if (error) {
         console.error('Error fetching platos:', error);
         return [];
     }
-    return data || [];
+    // Map database fields to match the Plato interface
+    return data?.map((item)=>({
+            id: item.id,
+            name: item.plato,
+            price: item.precio,
+            description: item.descripcion,
+            image: item.imagen,
+            category: item.categoria
+        })) || [];
 }
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
@@ -88,7 +95,7 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$components$2f$dist$2f$styled$2d$components$2e$browser$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/styled-components/dist/styled-components.browser.esm.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/context/CartContext.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/context/CartContext.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$componentes$2f$ShinyText$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/componentes/ShinyText.jsx [app-client] (ecmascript)");
 ;
@@ -100,13 +107,13 @@ var _s = __turbopack_context__.k.signature();
 ;
 const Button = (props)=>{
     _s();
-    const { addToCart, cart, increaseQuantity, decreaseQuantity } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CartContext"]);
+    const { addToCart, cart, increaseQuantity, decreaseQuantity } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContext$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CartContext"]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StyledWrapper, {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             className: "button",
             onClick: ()=>{
                 addToCart({
-                    name: props.comida.comida,
+                    name: props.comida.plato,
                     price: props.comida.precio
                 });
             },
@@ -251,13 +258,12 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// arreglo.jsx
 __turbopack_context__.s({
     "default": (()=>List)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$selectdatabase$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/datos/selectdatabase.tsx [app-client] (ecmascript)"); // Adjust the import path
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$selectdatabase$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/datos/selectdatabase.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$componentes$2f$Botonpedido$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/componentes/Botonpedido.jsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -290,7 +296,7 @@ function List() {
                                 alt: plato.plato
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 32,
+                                lineNumber: 25,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -298,7 +304,7 @@ function List() {
                                 children: plato.plato
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 37,
+                                lineNumber: 30,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -306,7 +312,7 @@ function List() {
                                 children: plato.descripcion
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 38,
+                                lineNumber: 31,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -314,7 +320,7 @@ function List() {
                                 children: plato.precio
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 39,
+                                lineNumber: 32,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -323,33 +329,33 @@ function List() {
                                     comida: plato
                                 }, void 0, false, {
                                     fileName: "[project]/src/datos/arreglo.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 34,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 40,
+                                lineNumber: 33,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/datos/arreglo.tsx",
-                        lineNumber: 31,
+                        lineNumber: 24,
                         columnNumber: 13
                     }, this)
                 }, plato.id, false, {
                     fileName: "[project]/src/datos/arreglo.tsx",
-                    lineNumber: 30,
+                    lineNumber: 23,
                     columnNumber: 11
                 }, this))
         }, void 0, false, {
             fileName: "[project]/src/datos/arreglo.tsx",
-            lineNumber: 28,
+            lineNumber: 21,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/datos/arreglo.tsx",
-        lineNumber: 27,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 }

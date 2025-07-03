@@ -63,7 +63,7 @@ const Button = (props)=>{
             className: "button",
             onClick: ()=>{
                 addToCart({
-                    name: props.comida.comida,
+                    name: props.comida.plato,
                     price: props.comida.precio
                 });
             },
@@ -208,14 +208,13 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// arreglo.jsx
 __turbopack_context__.s({
     "default": (()=>List)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 (()=>{
-    const e = new Error("Cannot find module '@/datos/selectdatabase.jsx'");
+    const e = new Error("Cannot find module '@/datos/selectdatabase.ts'");
     e.code = 'MODULE_NOT_FOUND';
     throw e;
 })();
@@ -251,7 +250,7 @@ function List() {
                                 alt: plato.plato
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 32,
+                                lineNumber: 25,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -259,7 +258,7 @@ function List() {
                                 children: plato.plato
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 37,
+                                lineNumber: 30,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -267,7 +266,7 @@ function List() {
                                 children: plato.descripcion
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 38,
+                                lineNumber: 31,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -275,7 +274,7 @@ function List() {
                                 children: plato.precio
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 39,
+                                lineNumber: 32,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -284,33 +283,33 @@ function List() {
                                     comida: plato
                                 }, void 0, false, {
                                     fileName: "[project]/src/datos/arreglo.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 34,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/datos/arreglo.tsx",
-                                lineNumber: 40,
+                                lineNumber: 33,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/datos/arreglo.tsx",
-                        lineNumber: 31,
+                        lineNumber: 24,
                         columnNumber: 13
                     }, this)
                 }, plato.id, false, {
                     fileName: "[project]/src/datos/arreglo.tsx",
-                    lineNumber: 30,
+                    lineNumber: 23,
                     columnNumber: 11
                 }, this))
         }, void 0, false, {
             fileName: "[project]/src/datos/arreglo.tsx",
-            lineNumber: 28,
+            lineNumber: 21,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/datos/arreglo.tsx",
-        lineNumber: 27,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 }
