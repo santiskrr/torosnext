@@ -15,9 +15,14 @@ interface Plato {
 export default function Carrito() {
   const { cart, decreaseQuantity, increaseQuantity } = useContext(CartContext);
 
-  const totalPrecio = cart
-    .reduce((total, item) => total + item.price * item.quantity, 0)
-    .toLocaleString("es-AR", { style: "currency", currency: "ARS" });
+  // Formatear precios como enteros con separadores de miles
+  const formatPrice = (price: number) => {
+    return Math.floor(price).toLocaleString("es-AR", { maximumFractionDigits: 0 });
+  };
+
+  const totalPrecio = formatPrice(
+    cart.reduce((total, item) => total + item.price * item.quantity, 0)
+  );
 
   const enviarPedido = () => {
     if (cart.length === 0) {
@@ -27,14 +32,8 @@ export default function Carrito() {
 
     const mensaje = cart
       .map((item) => {
-        const subtotal = (item.price * item.quantity).toLocaleString("es-AR", {
-          style: "currency",
-          currency: "ARS",
-        });
-        return `- ${item.name}: ${item.price.toLocaleString("es-AR", {
-          style: "currency",
-          currency: "ARS",
-        })} x ${item.quantity} = ${subtotal}`;
+        const subtotal = formatPrice(item.price * item.quantity);
+        return `- ${item.name}: ${formatPrice(item.price)} x ${item.quantity} = ${subtotal}`;
       })
       .join("\n");
     const whatsappMensaje = `Hola, quiero hacer un pedido:\n${mensaje}\n\nTotal: ${totalPrecio}`;
@@ -52,9 +51,9 @@ export default function Carrito() {
           <ul className="mb-4">
             {cart.map((item, index) => (
               <li key={index} className="text-lg flex justify-between items-center">
-                {item.name} - {item.price.toLocaleString("es-AR", { style: "currency", currency: "ARS" })} x {item.quantity}
+                {item.name} - {formatPrice(item.price)} x {item.quantity}
                 <div>
-                    <button
+                  <button
                     className="ml-2 px-2 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
                     onClick={() => decreaseQuantity(item.name)}
                   >
@@ -66,7 +65,6 @@ export default function Carrito() {
                   >
                     ➕
                   </button>
-                  
                 </div>
               </li>
             ))}

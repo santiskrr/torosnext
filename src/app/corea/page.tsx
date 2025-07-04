@@ -1,7 +1,7 @@
  "use client"
 import './Corea.css';
 import { motion } from 'framer-motion';
-import Listcorea from "@/datos/arregloCorea.jsx";
+import Listcorea from "@/datos/arregloCorea";
 
 function Corea() {
   return (

@@ -1,7 +1,6 @@
  "use client"
-import React from "react";
 import { motion } from 'framer-motion';
-import ListBebidas from "@/datos/arregloBebidas.jsx";
+import ListBebidas from "@/datos/arregloBebidas.tsx";
 import './bebidas.css'
 
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { platosEstrella } from "./dataPlatoEstrella";
 import { motion } from "framer-motion";
 import Button from "../componentes/Botonpedido";
 const ArregloPlatoEstrella = () => {

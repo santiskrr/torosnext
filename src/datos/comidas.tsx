@@ -1,10 +1,9 @@
-interface Plato {
+// types/comidas.tsx
+export interface Plato {
   id: number;
-  plato: string;
-  precio: number;
-  descripcion: string;
-  imagen: string;
-  categoria: string;
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+  category: string;
 }
-
-export default Plato

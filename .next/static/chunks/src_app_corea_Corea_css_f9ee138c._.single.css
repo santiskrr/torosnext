@@ -1,0 +1,53 @@
+/* [project]/src/app/corea/Corea.css [app-client] (css) */
+.do-hyeon {
+  font-optical-sizing: auto;
+  font-family: Do Hyeon, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.imagen {
+  width: 100%;
+  height: 10rem;
+  transition: transform .3s ease-in-out;
+}
+
+.platoCorea .imagen:hover {
+  border-radius: 12px;
+  transform: scale(1.05);
+}
+
+.platoCorea {
+  background-color: #00000046;
+  border: .5px solid #0f8;
+  max-width: 350px;
+}
+
+@media (width <= 768px) {
+  .mx-10, .md\:mx-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+
+  video, img {
+    height: 50vh;
+  }
+
+  .platoCorea {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=src_app_corea_Corea_css_f9ee138c._.single.css.map*/

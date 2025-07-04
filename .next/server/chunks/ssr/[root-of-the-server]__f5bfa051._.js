@@ -115,7 +115,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$
 ;
 async function getPlatos() {
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createClient"])();
-    const { data, error } = await supabase.from('comidas').select('id, plato, precio, descripcion, imagen, categoria').eq('categoria', 'China');
+    const { data, error } = await supabase.from('comidas').select('id, plato, precio, descripcion, imagen, categoria').eq('categoria', 'japon');
     if (error) {
         console.error('Error fetching platos:', error);
         return [];

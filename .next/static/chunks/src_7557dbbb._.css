@@ -1,0 +1,80 @@
+@import "https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap";
+/* [project]/src/app/corea/Corea.css [app-client] (css) */
+.do-hyeon {
+  font-optical-sizing: auto;
+  font-family: Do Hyeon, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.imagen {
+  width: 100%;
+  height: 10rem;
+  transition: transform .3s ease-in-out;
+}
+
+.platoCorea .imagen:hover {
+  border-radius: 12px;
+  transform: scale(1.05);
+}
+
+.platoCorea {
+  background-color: #00000046;
+  border: .5px solid #0f8;
+  max-width: 350px;
+}
+
+@media (width <= 768px) {
+  .mx-10, .md\:mx-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+
+  video, img {
+    height: 50vh;
+  }
+
+  .platoCorea {
+    max-width: 100%;
+  }
+}
+
+
+/* [project]/src/componentes/ShinyText.css [app-client] (css) */
+.shiny-text {
+  color: #fdf7f77c;
+  background: linear-gradient(120deg, #fff0 40%, #fff 50%, #fff0 60%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 4s linear infinite shine;
+  display: inline-block;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+
+
+/*# sourceMappingURL=src_7557dbbb._.css.map*/

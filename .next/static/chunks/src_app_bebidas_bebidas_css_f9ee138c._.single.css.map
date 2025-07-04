@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/bebidas/bebidas.css"],"sourcesContent":["\r\n\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  min-height: 100vh;\r\n}\r\n\r\n\r\n.imagenbebida {\r\n  height: 10rem;\r\n  width: 100%;\r\n  transition: 0.3s ease-in-out;\r\n}\r\n\r\n\r\n.platoBebidas .imagen:hover {\r\n  border-radius: 12px;\r\n}\r\n\r\n\r\n.platoBebidas {\r\n  border-style: solid;\r\n  border-color: rgb(0, 255, 98);\r\n  border-width: 0.5px;\r\n  background-color: rgba(0, 161, 100, 0.644);\r\n  max-width: 350px; \r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .mx-10,\r\n  .md\\:mx-40 {\r\n    margin-left: 1rem;\r\n    margin-right: 1rem;\r\n  }\r\n\r\n  h2 {\r\n    font-size: 2rem;\r\n  }\r\n\r\n  p {\r\n    font-size: 0.9rem;\r\n  }\r\n\r\n  video,\r\n  img {\r\n    height: 50vh;\r\n  }\r\n\r\n  .platoCorea {\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n.precio{\r\n\r\n  text-shadow: -2px 3px 2px rgb(0, 0, 0);\r\n  color: rgb(0, 255, 42);\r\n}"],"names":[],"mappings":"AAGA;;;;;;AAOA;;;;;;AAOA;;;;AAKA;;;;;;AAQA;EACE;;;;;EAMA;;;;EAIA;;;;EAIA;;;;EAKA;;;;;AAKF"}}]
+}

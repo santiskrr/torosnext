@@ -1,0 +1,78 @@
+/* [project]/src/componentes/ShinyText.css [app-client] (css) */
+.shiny-text {
+  color: #fdf7f77c;
+  background: linear-gradient(120deg, #fff0 40%, #fff 50%, #fff0 60%) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: 4s linear infinite shine;
+  display: inline-block;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+
+
+/* [project]/src/app/bebidas/bebidas.css [app-client] (css) */
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.imagenbebida {
+  width: 100%;
+  height: 10rem;
+  transition: all .3s ease-in-out;
+}
+
+.platoBebidas .imagen:hover {
+  border-radius: 12px;
+}
+
+.platoBebidas {
+  background-color: #00a164a4;
+  border: .5px solid #00ff62;
+  max-width: 350px;
+}
+
+@media (width <= 768px) {
+  .mx-10, .md\:mx-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+
+  video, img {
+    height: 50vh;
+  }
+
+  .platoCorea {
+    max-width: 100%;
+  }
+}
+
+.precio {
+  text-shadow: -2px 3px 2px #000;
+  color: #00ff2a;
+}
+
+
+/*# sourceMappingURL=src_1b027db6._.css.map*/

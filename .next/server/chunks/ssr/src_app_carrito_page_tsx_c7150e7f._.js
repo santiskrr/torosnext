@@ -17,24 +17,21 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContex
 ;
 function Carrito() {
     const { cart, decreaseQuantity, increaseQuantity } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$CartContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CartContext"]);
-    const totalPrecio = cart.reduce((total, item)=>total + item.price * item.quantity, 0).toLocaleString("es-AR", {
-        style: "currency",
-        currency: "ARS"
-    });
+    // Formatear precios como enteros con separadores de miles
+    const formatPrice = (price)=>{
+        return Math.floor(price).toLocaleString("es-AR", {
+            maximumFractionDigits: 0
+        });
+    };
+    const totalPrecio = formatPrice(cart.reduce((total, item)=>total + item.price * item.quantity, 0));
     const enviarPedido = ()=>{
         if (cart.length === 0) {
             alert("Tu carrito está vacío.");
             return;
         }
         const mensaje = cart.map((item)=>{
-            const subtotal = (item.price * item.quantity).toLocaleString("es-AR", {
-                style: "currency",
-                currency: "ARS"
-            });
-            return `- ${item.name}: ${item.price.toLocaleString("es-AR", {
-                style: "currency",
-                currency: "ARS"
-            })} x ${item.quantity} = ${subtotal}`;
+            const subtotal = formatPrice(item.price * item.quantity);
+            return `- ${item.name}: ${formatPrice(item.price)} x ${item.quantity} = ${subtotal}`;
         }).join("\n");
         const whatsappMensaje = `Hola, quiero hacer un pedido:\n${mensaje}\n\nTotal: ${totalPrecio}`;
         window.open(`https://wa.me/?text=${encodeURIComponent(whatsappMensaje)}`, "_blank");
@@ -47,7 +44,7 @@ function Carrito() {
                 children: "🛒 Tu Pedido"
             }, void 0, false, {
                 fileName: "[project]/src/app/carrito/page.tsx",
-                lineNumber: 46,
+                lineNumber: 45,
                 columnNumber: 7
             }, this),
             cart.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -55,7 +52,7 @@ function Carrito() {
                 children: "El carrito está vacío."
             }, void 0, false, {
                 fileName: "[project]/src/app/carrito/page.tsx",
-                lineNumber: 49,
+                lineNumber: 48,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                 children: [
@@ -66,10 +63,7 @@ function Carrito() {
                                 children: [
                                     item.name,
                                     " - ",
-                                    item.price.toLocaleString("es-AR", {
-                                        style: "currency",
-                                        currency: "ARS"
-                                    }),
+                                    formatPrice(item.price),
                                     " x ",
                                     item.quantity,
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -80,8 +74,8 @@ function Carrito() {
                                                 children: "➖"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/carrito/page.tsx",
-                                                lineNumber: 57,
-                                                columnNumber: 21
+                                                lineNumber: 56,
+                                                columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 className: "ml-4 px-2 py-1 bg-green-600 text-white rounded-md hover:bg-green-700",
@@ -89,24 +83,24 @@ function Carrito() {
                                                 children: "➕"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/carrito/page.tsx",
-                                                lineNumber: 63,
+                                                lineNumber: 62,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/carrito/page.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 55,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, index, true, {
                                 fileName: "[project]/src/app/carrito/page.tsx",
-                                lineNumber: 54,
+                                lineNumber: 53,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/carrito/page.tsx",
-                        lineNumber: 52,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -117,7 +111,7 @@ function Carrito() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/carrito/page.tsx",
-                        lineNumber: 74,
+                        lineNumber: 72,
                         columnNumber: 11
                     }, this)
                 ]
@@ -128,13 +122,13 @@ function Carrito() {
                 children: "📲 Enviar pedido por WhatsApp"
             }, void 0, false, {
                 fileName: "[project]/src/app/carrito/page.tsx",
-                lineNumber: 78,
+                lineNumber: 76,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/carrito/page.tsx",
-        lineNumber: 45,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 }

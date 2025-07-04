@@ -1,0 +1,52 @@
+/* [project]/src/app/bebidas/bebidas.css [app-client] (css) */
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.imagenbebida {
+  width: 100%;
+  height: 10rem;
+  transition: all .3s ease-in-out;
+}
+
+.platoBebidas .imagen:hover {
+  border-radius: 12px;
+}
+
+.platoBebidas {
+  background-color: #00a164a4;
+  border: .5px solid #00ff62;
+  max-width: 350px;
+}
+
+@media (width <= 768px) {
+  .mx-10, .md\:mx-40 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+
+  video, img {
+    height: 50vh;
+  }
+
+  .platoCorea {
+    max-width: 100%;
+  }
+}
+
+.precio {
+  text-shadow: -2px 3px 2px #000;
+  color: #00ff2a;
+}
+
+/*# sourceMappingURL=src_app_bebidas_bebidas_css_f9ee138c._.single.css.map*/
