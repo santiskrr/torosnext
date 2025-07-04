@@ -1,4 +1,3 @@
-// pages/china.tsx
 import PlatosList from "@/componentes/PlatosList";
 
 export default function China() {

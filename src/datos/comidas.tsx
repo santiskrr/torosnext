@@ -1,4 +1,3 @@
-// types/comidas.tsx
 export interface Plato {
   id: number;
   name: string;

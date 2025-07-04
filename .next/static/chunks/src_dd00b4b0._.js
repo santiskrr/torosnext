@@ -24,7 +24,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// utils/selectdatabase.tsx
 __turbopack_context__.s({
     "getPlatos": (()=>getPlatos)
 });
@@ -269,7 +268,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// components/PlatosList.tsx
 __turbopack_context__.s({
     "default": (()=>PlatosList)
 });
@@ -342,7 +340,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
             children: "Cargando..."
         }, void 0, false, {
             fileName: "[project]/src/componentes/PlatosList.tsx",
-            lineNumber: 83,
+            lineNumber: 82,
             columnNumber: 12
         }, this);
     }
@@ -352,7 +350,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
             children: error
         }, void 0, false, {
             fileName: "[project]/src/componentes/PlatosList.tsx",
-            lineNumber: 87,
+            lineNumber: 86,
             columnNumber: 12
         }, this);
     }
@@ -362,7 +360,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
             children: "No hay platos disponibles."
         }, void 0, false, {
             fileName: "[project]/src/componentes/PlatosList.tsx",
-            lineNumber: 91,
+            lineNumber: 90,
             columnNumber: 12
         }, this);
     }
@@ -390,7 +388,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                 onClick: ()=>showImageZoom && esEscritorio && setImagenAmpliada(plato.image)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                                lineNumber: 112,
+                                lineNumber: 111,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -401,7 +399,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: isFeatured ? `Plato Estrella: ${plato.name}` : plato.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 119,
+                                        lineNumber: 118,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -409,7 +407,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: plato.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 121,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -417,7 +415,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: isFeatured ? `Precio: ${formatPrice(plato.price)}` : formatPrice(plato.price)
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 123,
+                                        lineNumber: 122,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -426,29 +424,29 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                             comida: plato
                                         }, void 0, false, {
                                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 126,
+                                        lineNumber: 125,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                                lineNumber: 118,
+                                lineNumber: 117,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, plato.id, true, {
                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                        lineNumber: 107,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                lineNumber: 99,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             showImageZoom && imagenAmpliada && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -462,7 +460,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                             className: "max-w-[90vw] max-h-[90vh] rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                            lineNumber: 137,
+                            lineNumber: 136,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -471,18 +469,18 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                            lineNumber: 142,
+                            lineNumber: 141,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/componentes/PlatosList.tsx",
-                    lineNumber: 136,
+                    lineNumber: 135,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                lineNumber: 135,
+                lineNumber: 134,
                 columnNumber: 9
             }, this)
         ]

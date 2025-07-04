@@ -1,4 +1,3 @@
-// utils/selectdatabase.tsx
 import { createClient } from '@/utils/supabase/client';
 
 interface Plato {
@@ -8,8 +7,8 @@ interface Plato {
   description: string;
   image: string;
   category: string;
-  comida?: string; // Para compatibilidad con Botonpedido
-  precio?: number; // Para compatibilidad con Botonpedido
+  comida?: string;
+  precio?: number;
 }
 
 export async function getPlatos(category: string, limit?: number): Promise<Plato[]> {
@@ -42,7 +41,7 @@ export async function getPlatos(category: string, limit?: number): Promise<Plato
     description: item.descripcion,
     image: item.imagen,
     category: item.categoria,
-    comida: item.plato, // Para compatibilidad con Botonpedido
-    precio: item.precio, // Para compatibilidad con Botonpedido
+    comida: item.plato,  
+    precio: item.precio,  
   }));
 }

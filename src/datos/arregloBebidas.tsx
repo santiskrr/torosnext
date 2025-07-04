@@ -1,4 +1,3 @@
-// pages/bebidas.tsx
 import PlatosList from "@/componentes/PlatosList";
 
 export default function Bebidas() {

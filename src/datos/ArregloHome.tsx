@@ -1,4 +1,3 @@
-// pages/home.tsx
 import PlatosList from "@/componentes/PlatosList";
 import { motion } from "framer-motion";
 
