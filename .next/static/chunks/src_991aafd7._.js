@@ -19,93 +19,58 @@ const CartContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project
     cart: [],
     addToCart: ()=>{},
     increaseQuantity: ()=>{},
-    decreaseQuantity: ()=>{},
-    removeFromCart: ()=>{},
-    clearCart: ()=>{}
+    decreaseQuantity: ()=>{}
 });
 const CartProvider = ({ children })=>{
     _s();
     const [cart, setCart] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "CartProvider.useEffect": ()=>{
-            const savedCart = localStorage.getItem('cart');
-            if (savedCart) {
-                setCart(JSON.parse(savedCart));
-            }
-        }
-    }["CartProvider.useEffect"], []);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "CartProvider.useEffect": ()=>{
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-    }["CartProvider.useEffect"], [
-        cart
-    ]);
     const addToCart = (item)=>{
         setCart((prevCart)=>{
-            const existingItem = prevCart.find((cartItem)=>cartItem.id === item.id);
-            if (existingItem) {
-                return prevCart.map((cartItem)=>cartItem.id === item.id ? {
-                        ...cartItem,
-                        quantity: cartItem.quantity + 1
-                    } : cartItem);
+            const itemIndex = prevCart.findIndex((cartItem)=>cartItem.name === item.name);
+            if (itemIndex !== -1) {
+                const updatedCart = [
+                    ...prevCart
+                ];
+                updatedCart[itemIndex].quantity += 1;
+                return updatedCart;
+            } else {
+                return [
+                    ...prevCart,
+                    {
+                        ...item,
+                        quantity: 1
+                    }
+                ];
             }
-            return [
-                ...prevCart,
-                {
-                    ...item,
-                    quantity: 1
-                }
-            ];
         });
     };
-    const increaseQuantity = (id)=>{
-        setCart((prevCart)=>prevCart.map((item)=>item.id === id ? {
+    const increaseQuantity = (name)=>{
+        setCart((prevCart)=>prevCart.map((item)=>item.name === name ? {
                     ...item,
                     quantity: item.quantity + 1
                 } : item));
     };
-    const decreaseQuantity = (id)=>{
-        setCart((prevCart)=>prevCart.map((item)=>item.id === id ? {
+    const decreaseQuantity = (name)=>{
+        setCart((prevCart)=>prevCart.map((item)=>item.name === name ? {
                     ...item,
                     quantity: item.quantity - 1
                 } : item).filter((item)=>item.quantity > 0));
     };
-    const removeFromCart = (id)=>{
-        setCart((prevCart)=>prevCart.filter((item)=>item.id !== id));
-    };
-    const clearCart = ()=>{
-        setCart([]);
-    };
-    // Format price without cents
-    const formatPrice = (price)=>{
-        return price.toLocaleString("es-AR", {
-            style: "currency",
-            currency: "ARS",
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
-    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CartContext.Provider, {
         value: {
-            cart: cart.map((item)=>({
-                    ...item,
-                    price: parseInt(item.price.toString())
-                })),
+            cart,
             addToCart,
             increaseQuantity,
-            decreaseQuantity,
-            removeFromCart,
-            clearCart
+            decreaseQuantity
         },
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/CartContext.tsx",
-        lineNumber: 95,
+        lineNumber: 61,
         columnNumber: 5
     }, this);
 };
-_s(CartProvider, "gPYbNUmWK8tVVPcrFDrHV23HVlE=");
+_s(CartProvider, "ZqFaEIYkzI5UoYUmTgmqHbYYm/0=");
 _c = CartProvider;
 var _c;
 __turbopack_context__.k.register(_c, "CartProvider");

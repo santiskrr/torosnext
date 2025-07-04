@@ -1,7 +1,7 @@
 "use client";
-import React, { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from "react";
 
-interface CartItem {
+interface Plato {
   id: number;
   name: string;
   price: number;
@@ -11,100 +11,54 @@ interface CartItem {
   quantity: number;
 }
 
-interface CartContextType {
-  cart: CartItem[];
-  addToCart: (item: CartItem) => void;
-  increaseQuantity: (id: number) => void;
-  decreaseQuantity: (id: number) => void;
-  removeFromCart: (id: number) => void;
-  clearCart: () => void;
-}
-
-export const CartContext = createContext<CartContextType>({
+export const CartContext = createContext<{
+  cart: Plato[];
+  addToCart: (item: Plato) => void;
+  increaseQuantity: (name: string) => void;
+  decreaseQuantity: (name: string) => void;
+}>({
   cart: [],
   addToCart: () => {},
   increaseQuantity: () => {},
   decreaseQuantity: () => {},
-  removeFromCart: () => {},
-  clearCart: () => {},
 });
 
-export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [cart, setCart] = useState<CartItem[]>([]);
+export const CartProvider = ({ children }: { children: React.ReactNode }) => {
+  const [cart, setCart] = useState<Plato[]>([]);
 
-  useEffect(() => {
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
-
-  const addToCart = (item: CartItem) => {
+  const addToCart = (item: Plato) => {
     setCart((prevCart) => {
-      const existingItem = prevCart.find((cartItem) => cartItem.id === item.id);
-      if (existingItem) {
-        return prevCart.map((cartItem) =>
-          cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
-        );
+      const itemIndex = prevCart.findIndex((cartItem) => cartItem.name === item.name);
+      if (itemIndex !== -1) {
+        const updatedCart = [...prevCart];
+        updatedCart[itemIndex].quantity += 1;
+        return updatedCart;
+      } else {
+        return [...prevCart, { ...item, quantity: 1 }];
       }
-      return [...prevCart, { ...item, quantity: 1 }];
     });
   };
 
-  const increaseQuantity = (id: number) => {
+  const increaseQuantity = (name: string) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        item.name === name ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
   };
 
-  const decreaseQuantity = (id: number) => {
+  const decreaseQuantity = (name: string) => {
     setCart((prevCart) =>
       prevCart
         .map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+          item.name === name ? { ...item, quantity: item.quantity - 1 } : item
         )
         .filter((item) => item.quantity > 0)
     );
   };
 
-  const removeFromCart = (id: number) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
-  };
-
-  const clearCart = () => {
-    setCart([]);
-  };
-
-  // Format price without cents
-  const formatPrice = (price: number) => {
-    return price.toLocaleString("es-AR", {
-      style: "currency",
-      currency: "ARS",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    });
-  };
-
   return (
-    <CartContext.Provider
-      value={{
-        cart: cart.map((item) => ({
-          ...item,
-          price: parseInt(item.price.toString()), // Ensure price is an integer
-        })),
-        addToCart,
-        increaseQuantity,
-        decreaseQuantity,
-        removeFromCart,
-        clearCart,
-      }}
-    >
+    <CartContext.Provider value={{ cart, addToCart, increaseQuantity, decreaseQuantity }}>
       {children}
     </CartContext.Provider>
   );
