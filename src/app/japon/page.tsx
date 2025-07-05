@@ -2,6 +2,8 @@
 import './Japon.css';
 import { motion } from 'framer-motion';
 import List from "@/datos/arreglo";
+import Image from "next/image";
+
 
 function Japon() {
   return (<>
@@ -34,37 +36,46 @@ function Japon() {
           <List />
         </div>
 
-        {/* Mini video */}
-        <div className="m-20">
-          <video
-            src="/Video.mp4"
-            autoPlay
-            muted
-            loop
-            className="w-full h-64 object-cover rounded-xl shadow-lg"
-          ></video>
-        </div>
-
-        {/* Sección extra con imagen y descripción */}
-        <motion.div
-          className="mt-20 flex flex-col md:flex-row items-center gap-10"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <img
-            src="/4117.png"
-            className="m-5 w-full md:w-1/2 h-114 object-cover rounded-xl shadow-md"
-          />
-          <div>
-            <h3 className="text-2xl font-bold text-yellow-400 mb-2 orbitron">
-              Hecho por manos expertas
-            </h3>
-            <p className="text-zinc-300 orbitron">
-              Nuestros chefs traen técnicas auténticas de la cocina japonesa, fusionando tradición con ingredientes frescos para una experiencia única. ¡Cada plato es una obra maestra!
-            </p>
-          </div>
-        </motion.div>
+       {/* 🎞️ GIF decorativo tipo banner */}
+               <div className="max-w-screen overflow-hidden shadow-xl">
+                 <motion.div
+                   initial={{ opacity: 0, y: -10 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 1.2, ease: "easeOut" }}
+                 >
+                   <img
+                     src="https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes/Video.mp4.gif"
+                     alt="Banner animado"
+                     className="w-full h-[200px] object-cover"
+                   />
+                   </motion.div>
+                   </div>
+               
+                   <div>
+                     {/* Sección del chef */}
+                     <motion.div
+                       className="mt-16 flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-red-600 via-red-400 p-6 rounded-xl shadow-[0_4px_12px_#6E1B14]"
+                       initial={{ opacity: 0, y: -20 }}
+                       animate={{ opacity: 1, y: 0 }}
+                       transition={{ duration: 0.8 }}
+                     >
+                       <div className="md:w-[220px] md:h-[320px] flex-shrink-0 overflow-hidden rounded-lg shadow-md">
+                         <Image
+                           src="https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//4117.png"
+                           alt="Chef Lián Fuentes"
+                           width={220}
+                           height={320}
+                           className="w-full h-full object-cover"
+                         />
+                       </div>
+                   <h3 className="text-2xl font-bold text-white mb-2 Do Hyeon">
+                     Sabores de Japon
+                   </h3>
+                   <p className="text-black Do Hyeon">
+                     Nuestros chefs combinan técnicas tradicionales coreanas con ingredientes frescos, creando platos llenos de sabor y pasión. ¡Una experiencia única!
+                   </p>
+                   </motion.div>
+                 </div>
       </div>
     </div>
     </>

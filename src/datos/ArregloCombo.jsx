@@ -4,7 +4,6 @@ import { combos } from "@/datos/dataCombo";
 import { CartContext } from "@/context/CartContext";
 import { useEffect, useState, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 const ArregloCombo = () => {
     const { addToCart } = useContext(CartContext);
@@ -42,14 +41,14 @@ const ArregloCombo = () => {
                         <div className="relative text-white rounded-xl overflow-hidden shadow-2xl bg-black/80">
                             {/* FONDOS GIF */}
                             <div className="absolute inset-0 z-0 flex">
-                                {combo.gifs.map((gif, idx) => (
-                                    <Image
-                                        key={idx}
-                                        src={gif.src}
-                                        alt={gif.alt}
-                                        className="w-1/2 h-full object-cover"
-                                    />
-                                ))}
+                            {combo.gifs.map((gif, idx) => (
+                                <img
+                                key={idx}
+                                src={gif.src}
+                                alt={gif.alt}
+                                className="w-1/2 h-full object-cover"
+                                />
+                            ))}
                             </div>
                             <div className="absolute inset-0 bg-red-800/80 backdrop-blur-[2px]" />
 

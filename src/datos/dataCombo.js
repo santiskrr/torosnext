@@ -1,5 +1,3 @@
-import dumplingGif from "@/assets/dumplin.gif";
-import arrozGif from "@/assets/Arroz.gif";
 
 export const combos = [
   {
@@ -7,8 +5,8 @@ export const combos = [
     descripcion: "6 Dumplings + Arroz Frito + Bebida",
     precio: "$35.000",
     gifs: [
-      { src: dumplingGif, alt: "Dumpling" },
-      { src: arrozGif, alt: "Arroz Frito" },
+      { src: "https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//dumplin.gif", alt: "Dumpling" },
+      { src: "https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//Arroz.gif", alt: "Arroz Frito" },
     ],
   },
 ];

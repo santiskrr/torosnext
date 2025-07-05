@@ -108,7 +108,6 @@ function createClient() {
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// utils/selectdatabase.tsx
 __turbopack_context__.s({
     "getPlatos": (()=>getPlatos)
 });
@@ -333,7 +332,6 @@ const __TURBOPACK__default__export__ = Button;
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// components/PlatosList.tsx
 __turbopack_context__.s({
     "default": (()=>PlatosList)
 });
@@ -396,7 +394,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
             children: "Cargando..."
         }, void 0, false, {
             fileName: "[project]/src/componentes/PlatosList.tsx",
-            lineNumber: 83,
+            lineNumber: 82,
             columnNumber: 12
         }, this);
     }
@@ -406,7 +404,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
             children: error
         }, void 0, false, {
             fileName: "[project]/src/componentes/PlatosList.tsx",
-            lineNumber: 87,
+            lineNumber: 86,
             columnNumber: 12
         }, this);
     }
@@ -416,7 +414,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
             children: "No hay platos disponibles."
         }, void 0, false, {
             fileName: "[project]/src/componentes/PlatosList.tsx",
-            lineNumber: 91,
+            lineNumber: 90,
             columnNumber: 12
         }, this);
     }
@@ -444,7 +442,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                 onClick: ()=>showImageZoom && esEscritorio && setImagenAmpliada(plato.image)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                                lineNumber: 112,
+                                lineNumber: 111,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -455,7 +453,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: isFeatured ? `Plato Estrella: ${plato.name}` : plato.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 119,
+                                        lineNumber: 118,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -463,7 +461,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: plato.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 121,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -471,7 +469,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: isFeatured ? `Precio: ${formatPrice(plato.price)}` : formatPrice(plato.price)
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 123,
+                                        lineNumber: 122,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -480,29 +478,29 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                             comida: plato
                                         }, void 0, false, {
                                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 126,
+                                        lineNumber: 125,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                                lineNumber: 118,
+                                lineNumber: 117,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, plato.id, true, {
                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                        lineNumber: 107,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                lineNumber: 99,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             showImageZoom && imagenAmpliada && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -516,7 +514,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                             className: "max-w-[90vw] max-h-[90vh] rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                            lineNumber: 137,
+                            lineNumber: 136,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -525,18 +523,18 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                            lineNumber: 142,
+                            lineNumber: 141,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/componentes/PlatosList.tsx",
-                    lineNumber: 136,
+                    lineNumber: 135,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                lineNumber: 135,
+                lineNumber: 134,
                 columnNumber: 9
             }, this)
         ]
@@ -548,7 +546,6 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// pages/corea.tsx
 __turbopack_context__.s({
     "default": (()=>Corea)
 });
@@ -566,7 +563,7 @@ function Corea() {
         priceClassName: "mt-2 text-green-500 font-bold Do Hyeon"
     }, void 0, false, {
         fileName: "[project]/src/datos/arregloCorea.tsx",
-        lineNumber: 6,
+        lineNumber: 5,
         columnNumber: 5
     }, this);
 }
@@ -582,7 +579,9 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$arregloCorea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/datos/arregloCorea.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -622,7 +621,7 @@ function Corea() {
                                             children: "Made in Korea"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/corea/page.tsx",
-                                            lineNumber: 24,
+                                            lineNumber: 26,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -630,116 +629,139 @@ function Corea() {
                                             children: "음식, 음료 및 지원 강"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/corea/page.tsx",
-                                            lineNumber: 27,
+                                            lineNumber: 29,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/corea/page.tsx",
-                                    lineNumber: 23,
+                                    lineNumber: 25,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/corea/page.tsx",
-                                lineNumber: 17,
+                                lineNumber: 19,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/corea/page.tsx",
-                            lineNumber: 12,
+                            lineNumber: 14,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$arregloCorea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                             fileName: "[project]/src/app/corea/page.tsx",
-                            lineNumber: 34,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/corea/page.tsx",
-                    lineNumber: 10,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "m-20",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
-                        src: "/Video.mp4",
-                        autoPlay: true,
-                        muted: true,
-                        loop: true,
-                        className: "w-full h-64 object-cover rounded-xl shadow-lg"
+                    className: "max-w-screen overflow-hidden shadow-xl",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                        initial: {
+                            opacity: 0,
+                            y: -10
+                        },
+                        animate: {
+                            opacity: 1,
+                            y: 0
+                        },
+                        transition: {
+                            duration: 1.2,
+                            ease: "easeOut"
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: "https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes/Video.mp4.gif",
+                            alt: "Banner animado",
+                            className: "w-full h-[200px] object-cover"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/corea/page.tsx",
+                            lineNumber: 47,
+                            columnNumber: 13
+                        }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/corea/page.tsx",
-                        lineNumber: 40,
+                        lineNumber: 42,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/corea/page.tsx",
-                    lineNumber: 39,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                    className: "mt-20 flex flex-col md:flex-row items-center gap-10 px-10",
-                    initial: {
-                        opacity: 0,
-                        x: -50
-                    },
-                    animate: {
-                        opacity: 1,
-                        x: 0
-                    },
-                    transition: {
-                        duration: 0.7
-                    },
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                            src: "/4264.png",
-                            className: "m-5 w-full md:w-1/2 h-114 object-cover rounded-xl shadow-md",
-                            alt: "Korean culture"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/corea/page.tsx",
-                            lineNumber: 55,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-2xl font-bold text-white mb-2 Do Hyeon",
-                                    children: "Sabores de Corea"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/corea/page.tsx",
-                                    lineNumber: 61,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-blue-400 Do Hyeon",
-                                    children: "Nuestros chefs combinan técnicas tradicionales coreanas con ingredientes frescos, creando platos llenos de sabor y pasión. ¡Una experiencia única!"
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "mt-16 flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-black via-blue-600 to-black p-6 rounded-xl shadow-[0_4px_12px_#6E1B14]",
+                        initial: {
+                            opacity: 0,
+                            y: -20
+                        },
+                        animate: {
+                            opacity: 1,
+                            y: 0
+                        },
+                        transition: {
+                            duration: 0.8
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "md:w-[220px] md:h-[320px] flex-shrink-0 overflow-hidden rounded-lg shadow-md",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//4264.png",
+                                    alt: "Chef Lián Fuentes",
+                                    width: 220,
+                                    height: 320,
+                                    className: "w-full h-full object-cover"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/corea/page.tsx",
                                     lineNumber: 64,
-                                    columnNumber: 13
+                                    columnNumber: 19
                                 }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/app/corea/page.tsx",
-                            lineNumber: 60,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/corea/page.tsx",
+                                lineNumber: 63,
+                                columnNumber: 17
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                className: "text-2xl font-bold text-white mb-2 Do Hyeon",
+                                children: "Sabores de Corea"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/corea/page.tsx",
+                                lineNumber: 72,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-blue-400 Do Hyeon",
+                                children: "Nuestros chefs combinan técnicas tradicionales coreanas con ingredientes frescos, creando platos llenos de sabor y pasión. ¡Una experiencia única!"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/corea/page.tsx",
+                                lineNumber: 75,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/corea/page.tsx",
+                        lineNumber: 57,
+                        columnNumber: 15
+                    }, this)
+                }, void 0, false, {
                     fileName: "[project]/src/app/corea/page.tsx",
-                    lineNumber: 49,
-                    columnNumber: 9
+                    lineNumber: 55,
+                    columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/corea/page.tsx",
-            lineNumber: 9,
+            lineNumber: 11,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/corea/page.tsx",
-        lineNumber: 8,
+        lineNumber: 10,
         columnNumber: 5
     }, this);
 }
