@@ -1,7 +1,3 @@
 {
-  "/bebidas/page": "app/bebidas/page.js",
-  "/china/page": "app/china/page.js",
-  "/devs/page": "app/devs/page.js",
-  "/japon/page": "app/japon/page.js",
   "/page": "app/page.js"
 }

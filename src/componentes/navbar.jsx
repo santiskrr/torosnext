@@ -6,7 +6,7 @@ import { Spectral_SC } from 'next/font/google'
  
 const spectral = Spectral_SC({
   weight:["200"],
-  subsets: ['static'],
+  subsets: ['latin'],
 })
 
 const Navbar = () => {
