@@ -1,9 +1,7 @@
 {
   "app": {
-    "[project]/src/app/_not-found/page": [],
     "[project]/src/app/bebidas/page": [],
     "[project]/src/app/china/page": [],
-    "[project]/src/app/corea/page": [],
     "[project]/src/app/devs/page": [],
     "[project]/src/app/japon/page": [],
     "[project]/src/app/page": []

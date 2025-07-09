@@ -1,10 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/bebidas/page": "app/bebidas/page.js",
   "/china/page": "app/china/page.js",
-  "/corea/page": "app/corea/page.js",
   "/devs/page": "app/devs/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/japon/page": "app/japon/page.js",
   "/page": "app/page.js"
 }
