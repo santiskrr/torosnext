@@ -1,9 +1,6 @@
 import "@/componentes/index.css"
 import GradientText from "@/componentes/GradientText.jsx";
 import Link from 'next/link';
-import Image from 'next/image'
-import gifDecorativo from "@/assets/212830_small.gif"; // Chispas
-import gifSmoke from "@/assets/smoke.gif"; // Humo con fondo transparente
 
 import { Spectral_SC } from 'next/font/google'
  
@@ -20,15 +17,15 @@ const Navbar = () => {
  ring-1 ring-white/10">
 
       {/* GIF de humo */}
-      <Image
-        src={gifSmoke}
+      <img
+        src="https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//smoke.gif"
         alt="Humo decorativo"
         className="absolute top-0 left-0 w-full h-full object-cover opacity-30 mix-blend-lighten pointer-events-none z-0"
       />
 
       {/* GIF de chispas */}
-      <Image
-        src={gifDecorativo}
+      <img
+        src="https://fptpagsqdrwmvzonuhsd.supabase.co/storage/v1/object/public/imagenes//212830_small.gif"
         alt="Chispas decorativas"
         className="absolute top-0 left-0 w-full h-full object-cover mix-blend-screen pointer-events-none z-10"
       />

@@ -108,7 +108,6 @@ function createClient() {
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// utils/selectdatabase.tsx
 __turbopack_context__.s({
     "getPlatos": (()=>getPlatos)
 });
@@ -122,17 +121,23 @@ async function getPlatos(category, limit) {
     }
     const { data, error } = await query;
     if (error) {
-        console.error(`Error fetching platos for category ${category}:`, error);
+        console.error(`Error fetching platos for category ${category}:`, error.message);
         return [];
     }
-    return data?.map((item)=>({
+    if (!data || data.length === 0) {
+        console.warn(`No data found for category ${category}`);
+        return [];
+    }
+    return data.map((item)=>({
             id: item.id,
             name: item.plato,
             price: item.precio,
             description: item.descripcion,
             image: item.imagen,
-            category: item.categoria
-        })) || [];
+            category: item.categoria,
+            comida: item.plato,
+            precio: item.precio
+        }));
 }
 }}),
 "[project]/src/componentes/ShinyText.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
@@ -327,7 +332,6 @@ const __TURBOPACK__default__export__ = Button;
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// components/PlatosList.tsx
 __turbopack_context__.s({
     "default": (()=>PlatosList)
 });
@@ -344,12 +348,25 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$componentes$2f$Botonp
 ;
 function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hover:shadow-blue-400 hover:scale-105 transition-transform duration-300", imageClassName = "imagen rounded-xl w-full h-40 object-cover mb-3", titleClassName = "text-xl font-semibold text-white orbitron", descriptionClassName = "text-sm text-zinc-300 mt-1 orbitron line-clamp-3", priceClassName = "mt-2 text-green-500 orbitron", showImageZoom = false, motionContainer = null, motionItem = null, isFeatured = false }) {
     const [platos, setPlatos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [imagenAmpliada, setImagenAmpliada] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [esEscritorio, setEsEscritorio] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         async function fetchPlatos() {
-            const data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$selectdatabase$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getPlatos"])(category, isFeatured ? 1 : undefined);
-            setPlatos(data);
+            setLoading(true);
+            setError(null);
+            try {
+                const data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$selectdatabase$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getPlatos"])(category, isFeatured ? 1 : undefined);
+                if (data.length === 0) {
+                    setError(`No se encontraron platos para la categoría ${category}`);
+                }
+                setPlatos(data);
+            } catch (err) {
+                setError("Error al cargar los platos. Por favor, intenta de nuevo.");
+            } finally{
+                setLoading(false);
+            }
         }
         fetchPlatos();
     }, [
@@ -371,6 +388,36 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
             maximumFractionDigits: 0
         });
     };
+    if (loading) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "text-white text-center",
+            children: "Cargando..."
+        }, void 0, false, {
+            fileName: "[project]/src/componentes/PlatosList.tsx",
+            lineNumber: 82,
+            columnNumber: 12
+        }, this);
+    }
+    if (error) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "text-red-500 text-center",
+            children: error
+        }, void 0, false, {
+            fileName: "[project]/src/componentes/PlatosList.tsx",
+            lineNumber: 86,
+            columnNumber: 12
+        }, this);
+    }
+    if (platos.length === 0) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "text-gray-400 text-center",
+            children: "No hay platos disponibles."
+        }, void 0, false, {
+            fileName: "[project]/src/componentes/PlatosList.tsx",
+            lineNumber: 90,
+            columnNumber: 12
+        }, this);
+    }
     const GridComponent = motionContainer ? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div : 'div';
     const ItemComponent = motionItem ? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div : 'div';
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -395,7 +442,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                 onClick: ()=>showImageZoom && esEscritorio && setImagenAmpliada(plato.image)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                                lineNumber: 85,
+                                lineNumber: 111,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -406,7 +453,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: isFeatured ? `Plato Estrella: ${plato.name}` : plato.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 118,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -414,7 +461,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: plato.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 121,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -422,7 +469,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                         children: isFeatured ? `Precio: ${formatPrice(plato.price)}` : formatPrice(plato.price)
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 96,
+                                        lineNumber: 122,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -431,29 +478,29 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                                             comida: plato
                                         }, void 0, false, {
                                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 125,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                                lineNumber: 91,
+                                lineNumber: 117,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, plato.id, true, {
                         fileName: "[project]/src/componentes/PlatosList.tsx",
-                        lineNumber: 80,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                lineNumber: 72,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             showImageZoom && imagenAmpliada && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -467,7 +514,7 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                             className: "max-w-[90vw] max-h-[90vh] rounded-lg"
                         }, void 0, false, {
                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                            lineNumber: 110,
+                            lineNumber: 136,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -476,18 +523,18 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
                             children: "×"
                         }, void 0, false, {
                             fileName: "[project]/src/componentes/PlatosList.tsx",
-                            lineNumber: 115,
+                            lineNumber: 141,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/componentes/PlatosList.tsx",
-                    lineNumber: 109,
+                    lineNumber: 135,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/componentes/PlatosList.tsx",
-                lineNumber: 108,
+                lineNumber: 134,
                 columnNumber: 9
             }, this)
         ]
@@ -499,7 +546,6 @@ function PlatosList({ category, className = "plato p-4 rounded-xl shadow-md hove
 
 var { g: global, __dirname } = __turbopack_context__;
 {
-// pages/bebidas.tsx
 __turbopack_context__.s({
     "default": (()=>Bebidas)
 });
@@ -517,7 +563,7 @@ function Bebidas() {
         priceClassName: "precio text-xl mt-2 font-bold"
     }, void 0, false, {
         fileName: "[project]/src/datos/arregloBebidas.tsx",
-        lineNumber: 6,
+        lineNumber: 5,
         columnNumber: 5
     }, this);
 }
@@ -543,53 +589,46 @@ function Bebidas() {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: " bg-[url(https://i.pinimg.com/originals/67/b0/6e/67b06edc0d6a17b06e1ad701c09e9732.jpg)]",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center mb-12 text-black p-10",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                            initial: {
-                                opacity: 0,
-                                y: -40
-                            },
-                            animate: {
-                                opacity: 1,
-                                y: 0
-                            },
-                            transition: {
-                                duration: 0.8,
-                                ease: "easeOut"
-                            },
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "p-40 relative ml-40 mr-40 h-60 rounded-2xl bg-cover bg-no-repeat bg-bottom",
-                                style: {
-                                    backgroundImage: `url(https://i.pinimg.com/originals/b3/18/4d/b3184d6c4aea0ad4e595e699bf392b56.jpg)`
-                                }
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/bebidas/page.tsx",
-                                lineNumber: 20,
-                                columnNumber: 13
-                            }, this)
+                className: "text-center mb-12 text-black p-10",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                        initial: {
+                            opacity: 0,
+                            y: -40
+                        },
+                        animate: {
+                            opacity: 1,
+                            y: 0
+                        },
+                        transition: {
+                            duration: 0.8,
+                            ease: "easeOut"
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "p-40 relative h-60 rounded-2xl bg-cover bg-no-repeat bg-bottom ",
+                            style: {
+                                backgroundImage: `url(https://i.pinimg.com/originals/b3/18/4d/b3184d6c4aea0ad4e595e699bf392b56.jpg)`
+                            }
                         }, void 0, false, {
                             fileName: "[project]/src/app/bebidas/page.tsx",
-                            lineNumber: 15,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$arregloBebidas$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                            fileName: "[project]/src/app/bebidas/page.tsx",
-                            lineNumber: 29,
-                            columnNumber: 11
+                            lineNumber: 19,
+                            columnNumber: 13
                         }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/app/bebidas/page.tsx",
-                    lineNumber: 14,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/bebidas/page.tsx",
+                        lineNumber: 14,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$datos$2f$arregloBebidas$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                        fileName: "[project]/src/app/bebidas/page.tsx",
+                        lineNumber: 28,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/app/bebidas/page.tsx",
                 lineNumber: 13,
-                columnNumber: 7
+                columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/bebidas/page.tsx",
