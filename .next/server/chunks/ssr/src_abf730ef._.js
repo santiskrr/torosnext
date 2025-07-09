@@ -367,7 +367,11 @@ function Devs() {
                         contactText: "Contact Me",
                         avatarUrl: "https://media.istockphoto.com/id/1142192548/es/vector/perfil-de-avatar-hombre-silueta-de-cara-masculina-o-icono-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=O6KtgzjlrIvoGi2Cb1ZyppWKlqGL_5IXVHLUdLN33Ag=",
                         showUserInfo: true,
-                        enableTilt: true
+                        enableTilt: true,
+                        behindGradient: undefined,
+                        innerGradient: undefined,
+                        miniAvatarUrl: undefined,
+                        onContactClick: undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/devs/page.tsx",
                         lineNumber: 14,
@@ -391,15 +395,19 @@ function Devs() {
                         contactText: "Contact Me",
                         avatarUrl: "https://media.istockphoto.com/id/1142192548/es/vector/perfil-de-avatar-hombre-silueta-de-cara-masculina-o-icono-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=O6KtgzjlrIvoGi2Cb1ZyppWKlqGL_5IXVHLUdLN33Ag=",
                         showUserInfo: true,
-                        enableTilt: true
+                        enableTilt: true,
+                        behindGradient: undefined,
+                        innerGradient: undefined,
+                        miniAvatarUrl: undefined,
+                        onContactClick: undefined
                     }, void 0, false, {
                         fileName: "[project]/src/app/devs/page.tsx",
-                        lineNumber: 31,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/devs/page.tsx",
-                    lineNumber: 25,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this)
             ]

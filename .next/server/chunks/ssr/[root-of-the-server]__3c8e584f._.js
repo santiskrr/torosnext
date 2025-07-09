@@ -83,6 +83,37 @@ if (__TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$s
 }
 const __TURBOPACK__default__export__ = fontData;
 }}),
+"[next]/internal/font/google/trade_winds_5d4566ec.module.css [app-rsc] (css module)": ((__turbopack_context__) => {
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.v({
+  "className": "trade_winds_5d4566ec-module__-o9zCa__className",
+});
+}}),
+"[next]/internal/font/google/trade_winds_5d4566ec.js [app-rsc] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>__TURBOPACK__default__export__)
+});
+var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$trade_winds_5d4566ec$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__ = __turbopack_context__.i("[next]/internal/font/google/trade_winds_5d4566ec.module.css [app-rsc] (css module)");
+;
+const fontData = {
+    className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$trade_winds_5d4566ec$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].className,
+    style: {
+        fontFamily: "'Trade Winds', 'Trade Winds Fallback'",
+        fontWeight: 400,
+        fontStyle: "normal"
+    }
+};
+if (__TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$trade_winds_5d4566ec$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].variable != null) {
+    fontData.variable = __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$trade_winds_5d4566ec$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].variable;
+}
+const __TURBOPACK__default__export__ = fontData;
+}}),
 "[project]/src/componentes/navbar.jsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -95,6 +126,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$componentes$2f$GradientText$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/componentes/GradientText.jsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$spectral_sc_75d5d7cd$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[next]/internal/font/google/spectral_sc_75d5d7cd.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$trade_winds_5d4566ec$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[next]/internal/font/google/trade_winds_5d4566ec.js [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -110,7 +143,7 @@ const Navbar = ()=>{
                 className: "absolute top-0 left-0 w-full h-full object-cover opacity-30 mix-blend-lighten pointer-events-none z-0"
             }, void 0, false, {
                 fileName: "[project]/src/componentes/navbar.jsx",
-                lineNumber: 21,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -119,7 +152,7 @@ const Navbar = ()=>{
                 className: "absolute top-0 left-0 w-full h-full object-cover mix-blend-screen pointer-events-none z-10"
             }, void 0, false, {
                 fileName: "[project]/src/componentes/navbar.jsx",
-                lineNumber: 28,
+                lineNumber: 33,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -131,21 +164,21 @@ const Navbar = ()=>{
                         className: "max-h-[100px] h-auto max-w-[100px] w-auto"
                     }, void 0, false, {
                         fileName: "[project]/src/componentes/navbar.jsx",
-                        lineNumber: 37,
+                        lineNumber: 42,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/componentes/navbar.jsx",
-                    lineNumber: 36,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/componentes/navbar.jsx",
-                lineNumber: 35,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative flex items-center gap-4 p-2 rounded-lg trade-winds-regular",
+                className: "relative flex items-center gap-4 p-2 rounded-lg",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$componentes$2f$GradientText$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                     colors: [
                         "#40ffaa",
@@ -159,33 +192,33 @@ const Navbar = ()=>{
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                         href: "/",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: trade_winds.className,
+                            className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$trade_winds_5d4566ec$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].className,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                 className: "flex text-2xl ",
                                 children: "Comida Tradicional Asiática"
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/navbar.jsx",
-                                lineNumber: 45,
+                                lineNumber: 50,
                                 columnNumber: 57
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/componentes/navbar.jsx",
-                            lineNumber: 45,
+                            lineNumber: 50,
                             columnNumber: 17
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/componentes/navbar.jsx",
-                        lineNumber: 44,
+                        lineNumber: 49,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/componentes/navbar.jsx",
-                    lineNumber: 43,
+                    lineNumber: 48,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/componentes/navbar.jsx",
-                lineNumber: 42,
+                lineNumber: 47,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -202,12 +235,12 @@ const Navbar = ()=>{
                                     children: "China"
                                 }, void 0, false, {
                                     fileName: "[project]/src/componentes/navbar.jsx",
-                                    lineNumber: 52,
+                                    lineNumber: 57,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/navbar.jsx",
-                                lineNumber: 52,
+                                lineNumber: 57,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -217,12 +250,12 @@ const Navbar = ()=>{
                                     children: "Corea"
                                 }, void 0, false, {
                                     fileName: "[project]/src/componentes/navbar.jsx",
-                                    lineNumber: 53,
+                                    lineNumber: 58,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/navbar.jsx",
-                                lineNumber: 53,
+                                lineNumber: 58,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -232,12 +265,12 @@ const Navbar = ()=>{
                                     children: "Japón"
                                 }, void 0, false, {
                                     fileName: "[project]/src/componentes/navbar.jsx",
-                                    lineNumber: 54,
+                                    lineNumber: 59,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/navbar.jsx",
-                                lineNumber: 54,
+                                lineNumber: 59,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -247,12 +280,12 @@ const Navbar = ()=>{
                                     children: "Bebidas"
                                 }, void 0, false, {
                                     fileName: "[project]/src/componentes/navbar.jsx",
-                                    lineNumber: 55,
+                                    lineNumber: 60,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/navbar.jsx",
-                                lineNumber: 55,
+                                lineNumber: 60,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -262,34 +295,34 @@ const Navbar = ()=>{
                                     children: "Devs"
                                 }, void 0, false, {
                                     fileName: "[project]/src/componentes/navbar.jsx",
-                                    lineNumber: 56,
+                                    lineNumber: 61,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/componentes/navbar.jsx",
-                                lineNumber: 56,
+                                lineNumber: 61,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/componentes/navbar.jsx",
-                        lineNumber: 51,
+                        lineNumber: 56,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/componentes/navbar.jsx",
-                    lineNumber: 50,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/componentes/navbar.jsx",
-                lineNumber: 49,
+                lineNumber: 54,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/componentes/navbar.jsx",
-        lineNumber: 17,
+        lineNumber: 22,
         columnNumber: 1
     }, this);
 };
@@ -635,4 +668,4 @@ function RootLayout({ children }) {
 
 };
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__1fe6fd66._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__3c8e584f._.js.map

@@ -3,9 +3,15 @@ import GradientText from "@/componentes/GradientText.jsx";
 import Link from 'next/link';
 
 import { Spectral_SC } from 'next/font/google'
+import { Trade_Winds } from 'next/font/google'
  
 const spectral = Spectral_SC({
   weight:["200"],
+  subsets: ['latin'],
+})
+
+const trade_winds = Trade_Winds({
+  weight:["400"],
   subsets: ['latin'],
 })
 
@@ -38,10 +44,11 @@ const Navbar = () => {
       </div>
 
 
-            <div className="relative flex items-center gap-4 p-2 rounded-lg trade-winds-regular">
+            <div className="relative flex items-center gap-4 p-2 rounded-lg">
                 <GradientText colors={["#40ffaa", "#40ffaa", "#ff0000", "#40ffaa", "#40ffaa"]} animationSpeed={5} showBorder={false}>
-                <Link href="/"><h1 className="flex text-2xl ">Comida Tradicional Asiática</h1></Link>
-                </GradientText>
+                <Link href="/">
+                <div className= {trade_winds.className}><h1 className="flex text-2xl ">Comida Tradicional Asiática</h1></div></Link>
+                </GradientText> 
             </div>
             
             <div className="relative flex flex-grow justify-center">
