@@ -19,8 +19,7 @@ export default function Devs() {
             contactText="Contact Me"
             avatarUrl="https://media.istockphoto.com/id/1142192548/es/vector/perfil-de-avatar-hombre-silueta-de-cara-masculina-o-icono-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=O6KtgzjlrIvoGi2Cb1ZyppWKlqGL_5IXVHLUdLN33Ag="
             showUserInfo={true}
-            enableTilt={true}
-          />
+            enableTilt={true} behindGradient={undefined} innerGradient={undefined} miniAvatarUrl={undefined} onContactClick={undefined}          />
         </a>
         <a
           href="https://github.com/Ale754-bot"
@@ -36,8 +35,7 @@ export default function Devs() {
             contactText="Contact Me"
             avatarUrl="https://media.istockphoto.com/id/1142192548/es/vector/perfil-de-avatar-hombre-silueta-de-cara-masculina-o-icono-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=O6KtgzjlrIvoGi2Cb1ZyppWKlqGL_5IXVHLUdLN33Ag="
             showUserInfo={true}
-            enableTilt={true}
-          />
+            enableTilt={true} behindGradient={undefined} innerGradient={undefined} miniAvatarUrl={undefined} onContactClick={undefined}          />
         </a>
       </div>
     </div>
