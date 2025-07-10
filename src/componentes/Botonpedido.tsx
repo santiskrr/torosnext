@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import { CartContext } from '@/context/CartContext';
 import React, { useContext } from 'react';
 import ShinyText from './ShinyText';
+import { Silkscreen } from 'next/font/google';
+
+
+const silkscreen = Silkscreen({
+  weight:["400"],
+  subsets: ['latin'],
+})
 
 interface Comida {
   id: number;
@@ -35,7 +42,9 @@ const Button = ({ comida }: { comida: Comida }) => {
         <span className="shadow" />
         <span className="edge" />
         <div className="front">
-          <ShinyText text="Añadir al Carrito" disabled={false} speed={2} className="silkscreen-regular" />
+          <div className= {silkscreen.className}>
+          <ShinyText text="Añadir al Carrito" disabled={false} speed={2}/>
+          </div>
         </div>
       </button>
     </StyledWrapper>

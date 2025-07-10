@@ -27,7 +27,7 @@ function Corea() {
                   Made in Korea
                 </h2>
                 <p className="text-lg shadow-xl shadow-md hover:shadow-violet-500 bg-black/60 text-violet-400 mt-2 Do Hyeon ">
-                  음식, 음료 및 지원 강
+                  한국 전통 음식
                 </p>
               </div>
             </div>

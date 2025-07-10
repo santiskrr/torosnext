@@ -1,5 +1,8 @@
 {
+  "/bebidas/page": "app/bebidas/page.js",
+  "/corea/page": "app/corea/page.js",
   "/devs/page": "app/devs/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/japon/page": "app/japon/page.js",
   "/page": "app/page.js"
 }

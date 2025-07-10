@@ -1,7 +1,24 @@
 {
   "app": {
+    "[project]/src/app/bebidas/page": [
+      "static/media/Ktk0ALCRZonmalTgyPmRfs1qwnTQN4a3X4ZA-s.p.4e48f150.woff2",
+      "static/media/7Au_p_4ijSecA1yHOCX2z24PMFk-s.p.2e70dfd7.woff2",
+      "static/media/m8JXjfVPf62XiF7kO_i9YLNla0GA1dM-s.p.9d231139.woff2",
+      "static/media/AYCPpXPpYNIIT7h8_QenM0Jt5vOt5o_H-s.p.d08d7dd3.woff2"
+    ],
+    "[project]/src/app/corea/page": [
+      "static/media/Ktk0ALCRZonmalTgyPmRfs1qwnTQN4a3X4ZA-s.p.4e48f150.woff2",
+      "static/media/AYCPpXPpYNIIT7h8_QenM0Jt5vOt5o_H-s.p.d08d7dd3.woff2",
+      "static/media/m8JXjfVPf62XiF7kO_i9YLNla0GA1dM-s.p.9d231139.woff2",
+      "static/media/TwMN_I8CRRU2zM86HGEwbQel_O_D-s.p.b315c330.woff2"
+    ],
     "[project]/src/app/devs/page": [
       "static/media/Ktk0ALCRZonmalTgyPmRfs1qwnTQN4a3X4ZA-s.p.4e48f150.woff2"
+    ],
+    "[project]/src/app/japon/page": [
+      "static/media/Ktk0ALCRZonmalTgyPmRfs1qwnTQN4a3X4ZA-s.p.4e48f150.woff2",
+      "static/media/m8JXjfVPf62XiF7kO_i9YLNla0GA1dM-s.p.9d231139.woff2",
+      "static/media/AYCPpXPpYNIIT7h8_QenM0Jt5vOt5o_H-s.p.d08d7dd3.woff2"
     ],
     "[project]/src/app/page": [
       "static/media/Ktk0ALCRZonmalTgyPmRfs1qwnTQN4a3X4ZA-s.p.4e48f150.woff2",

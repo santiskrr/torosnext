@@ -1,7 +1,11 @@
 {
   "pages": {},
   "app": {
-    "[project]/src/app/japon/page": []
+    "[project]/src/app/japon/page": [
+      "static/media/Ktk0ALCRZonmalTgyPmRfs1qwnTQN4a3X4ZA-s.p.4e48f150.woff2",
+      "static/media/m8JXjfVPf62XiF7kO_i9YLNla0GA1dM-s.p.9d231139.woff2",
+      "static/media/AYCPpXPpYNIIT7h8_QenM0Jt5vOt5o_H-s.p.d08d7dd3.woff2"
+    ]
   },
   "appUsingSizeAdjust": true,
   "pagesUsingSizeAdjust": false
