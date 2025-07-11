@@ -41,7 +41,7 @@ const Button = ({ comida }: { comida: Comida }) => {
       >
         <span className="shadow" />
         <span className="edge" />
-        <div className="front">
+        <div className="front silkscreen-regular">
           <div className= {silkscreen.className}>
           <ShinyText text="Añadir al Carrito" disabled={false} speed={2}/>
           </div>
